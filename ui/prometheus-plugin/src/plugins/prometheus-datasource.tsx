@@ -30,6 +30,7 @@ import { PrometheusDatasourceEditor } from './PrometheusDatasourceEditor';
  * Creates a PrometheusClient for a specific datasource spec.
  */
 const createClient: DatasourcePlugin<PrometheusDatasourceSpec, PrometheusClient>['createClient'] = (spec, options) => {
+  console.log('create client 123');
   const { directUrl, proxy } = spec;
   const { proxyUrl } = options;
 
